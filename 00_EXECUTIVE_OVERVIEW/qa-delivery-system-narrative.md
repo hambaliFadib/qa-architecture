@@ -117,3 +117,101 @@ This involves:
 In such environments, QA is not merely responsible for testing.
 
 QA is responsible for maintaining system integrity by acting as a control authority, ensuring that what is tested, validated, and released truly represents a consistent and reliable system.
+
+## 3. QA Delivery Flow
+
+To ensure system quality in unstable and evolving project environments, QA must operate through a structured control flow rather than isolated testing activities.
+
+This flow represents how QA maintains control from unclear requirements to final validation and release.
+
+### Phase 1 — Requirement Intake & Clarification
+
+In the absence of stable requirements, QA begins by:
+
+- Identifying available inputs (documents, discussions, system behavior)
+- Highlighting ambiguities and missing definitions
+- Mapping initial business flow assumptions
+
+At this stage, QA does not assume correctness, but instead establishes a working baseline for validation.
+
+### Phase 2 — Business Flow & Rule Mapping
+
+Before testing begins, QA translates requirements into:
+
+- Explicit business flows
+- Defined decision points
+- Identified edge cases
+
+This ensures that testing is based on structured understanding rather than fragmented requirements.
+
+This phase is directly supported by:
+
+- Business Flow documentation
+- Business Rule mapping artifacts
+
+### Phase 3 — Test Scope Definition
+
+QA defines validation scope based on:
+
+- Critical system flows
+- High-risk areas (integration, data, calculation)
+- Dependency across modules
+
+This prevents over-testing irrelevant areas and ensures focus on system-critical behavior.
+
+### Phase 4 — Execution & Validation
+
+Testing is executed across multiple layers:
+
+- Functional validation (UI/API)
+- Data validation (database consistency)
+- Integration validation (cross-module behavior)
+
+QA ensures that validation is not limited to surface-level outputs, but includes underlying data and logic correctness.
+
+### Phase 5 — Defect Identification & Control
+
+Defects are not treated as isolated issues, but as indicators of deeper system problems.
+
+QA:
+
+- Logs defects with context (flow, module, impact)
+- Identifies patterns and recurring issues
+- Links defects to business flow and system behavior
+
+This phase is supported by:
+
+- QA Logs
+- Defect tracking systems
+
+### Phase 6 — Feedback & Iteration Control
+
+Given the dynamic nature of requirements, QA continuously:
+
+- Tracks logic changes
+- Evaluates impact on existing flows
+- Ensures that fixes do not introduce new inconsistencies
+
+QA acts as a control mechanism to prevent uncontrolled iteration cycles.
+
+### Phase 7 — Release Validation
+
+Before release, QA ensures:
+
+- All critical flows are validated
+- Data consistency is maintained
+- Known risks are explicitly documented
+
+Release decisions are based on controlled validation, not assumption of completeness.
+
+---
+
+### Conclusion
+
+QA Delivery Flow is not a linear testing process, but a continuous control system that:
+
+- Aligns business intent with system behavior
+- Maintains consistency across changes
+- Prevents invalid validation outcomes
+
+This structured approach allows QA to operate effectively even in unstable and evolving project environments.
