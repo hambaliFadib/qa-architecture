@@ -67,3 +67,53 @@ Testing alone cannot ensure system quality when:
 - System behavior is not fully defined
 
 This reality requires QA to evolve beyond testing, into a structured control system that ensures alignment between business intent, system implementation, and data integrity.
+
+## 2. QA Positioning
+
+In unstable and ambiguous project environments, QA cannot operate effectively as a passive executor of test cases.
+
+Based on the observed conditions, QA must evolve into an active control function within the system.
+
+### QA as a Control Layer
+
+Rather than simply validating outputs, QA operates as a control layer that ensures alignment between:
+
+- Business intent
+- System implementation
+- Data behavior
+
+This includes identifying inconsistencies, questioning unclear logic, and preventing invalid flows from being accepted as "correct".
+
+### Challenging Unvalidated Flows
+
+In scenarios where requirements are not properly validated by upstream roles (BA/SA), QA takes a critical stance:
+
+> QA does not automatically follow the defined flow if the flow itself is inconsistent or lacks business validation.
+
+This approach ensures that testing is not performed on unstable or misleading logic.
+
+### Preventing False Validation
+
+Without a control-oriented QA approach, there is a high risk of:
+
+- Validating incorrect system behavior
+- Approving flows that do not reflect real business needs
+- Masking deeper integration and data issues
+
+QA must act as a safeguard against false positives in system validation.
+
+### QA as a System Stabilizer
+
+Given the absence of strong validation from other stakeholders, QA becomes a stabilizing force within the project.
+
+This involves:
+
+- Highlighting inconsistencies across modules
+- Tracking logic changes and their impact
+- Ensuring that system behavior remains traceable and explainable
+
+### Conclusion
+
+In such environments, QA is not merely responsible for testing.
+
+QA is responsible for maintaining system integrity by acting as a control authority, ensuring that what is tested, validated, and released truly represents a consistent and reliable system.
