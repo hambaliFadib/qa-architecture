@@ -167,3 +167,81 @@ Instead of reacting to issues individually, QA established a system-level unders
 - Where inconsistencies occur
 - How they propagate across the flow
 - What their impact is on business outcomes
+
+## 6. Key Findings
+
+During the validation of the calculation module, several critical system-level inconsistencies were identified.
+
+These findings were not treated as isolated defects, but as indicators of deeper structural issues within the system.
+
+---
+
+### 1. Output Integrity Inconsistency
+
+In multiple scenarios, the calculation results observed in the database did not match the results displayed in the UI.
+
+Further investigation revealed that:
+
+- The calculation formula used by the system was incorrect
+- The system produced inconsistent outputs across different layers
+
+This indicated a breakdown in output integrity, where the system could not guarantee that a single source of truth existed for calculation results.
+
+**Impact:**
+- High risk of incorrect billing
+- Loss of trust in system-generated values
+- Difficulty in validating correctness
+
+---
+
+### 2. Rule Composition Ambiguity
+
+Complex scenarios involving Service Agreement (SA) types and addon configurations resulted in unclear tiering behavior.
+
+Key challenges included:
+
+- Lack of explicit rule hierarchy for tiering combinations
+- Undefined interaction between multiple addon types
+- Difficulty in predicting system behavior for combined rule conditions
+
+This revealed that rule composition within the system was not clearly defined or consistently implemented.
+
+**Impact:**
+- Unpredictable calculation outcomes
+- High dependency on implicit system behavior
+- Increased risk of incorrect pricing logic
+
+---
+
+### 3. Uncontrolled Adjustment Mechanism
+
+Adjustments could be applied at multiple stages of the process, including:
+
+- Rating
+- Billing
+- Invoice
+
+However, there was no clear boundary or governance regarding:
+
+- Where adjustments should be applied
+- Why they are applied at a specific stage
+- How they affect downstream calculations
+
+This created a condition where the same value could be altered multiple times across different layers without traceable justification.
+
+**Impact:**
+- Loss of calculation traceability
+- Increased risk of data inconsistency
+- Difficulty in auditing and explaining final billing values
+
+---
+
+### Overall Insight
+
+These findings indicate that the primary issue was not isolated defects, but a lack of structural control in:
+
+- Output consistency
+- Rule definition
+- Process boundaries
+
+Without addressing these foundational issues, validating individual calculation results would lead to false confidence in system correctness.
