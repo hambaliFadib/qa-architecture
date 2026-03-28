@@ -299,3 +299,97 @@ It ensures that:
 - Validation is traceable and consistent
 - Critical logic is verifiable
 - System behavior remains aligned with business intent
+
+## 5. Decision Model
+
+In complex and unstable project environments, ensuring quality is not only about identifying defects, but also about making controlled and accountable decisions.
+
+QA plays a critical role in defining whether the system is acceptable, risky, or invalid based on observed conditions.
+
+### Decision Categories
+
+QA classifies system conditions into three primary categories:
+
+#### 1. Valid
+
+The system behavior is aligned with:
+
+- Defined business intent
+- Expected system logic
+- Verified data consistency
+
+These scenarios can proceed without restriction.
+
+#### 2. At Risk
+
+The system shows potential issues, such as:
+
+- Partial inconsistencies in logic
+- Minor integration gaps
+- Known defects with limited impact
+
+These conditions may still proceed, but must be:
+
+- Explicitly documented
+- Communicated to stakeholders
+- Monitored in subsequent iterations
+
+#### 3. Invalid
+
+The system behavior does not represent acceptable business or system logic, including:
+
+- Incorrect calculation results
+- Broken business flows
+- Critical data inconsistencies
+
+These conditions must not be approved and require correction before proceeding.
+
+### Decision Responsibility
+
+QA does not passively accept system behavior.
+
+Instead, QA evaluates:
+
+- Whether the system represents correct business intent
+- Whether observed issues introduce unacceptable risk
+- Whether the system is stable enough for release
+
+QA decisions are based on evidence, not assumptions.
+
+### Risk Acceptance
+
+Not all defects require immediate resolution.
+
+QA supports controlled risk acceptance when:
+
+- The impact is limited
+- The affected flow is non-critical
+- There is a clear plan for resolution
+
+However, all accepted risks must be:
+
+- Documented
+- Tracked
+- Re-evaluated in future cycles
+
+### Decision Traceability
+
+All decisions must be traceable through:
+
+- QA Logs (validation outcomes)
+- Defect records (issue tracking)
+- Supporting artifacts (evidence and context)
+
+This ensures accountability and prevents loss of critical information.
+
+---
+
+### Conclusion
+
+The Decision Model enables QA to move beyond validation into controlled governance.
+
+It ensures that:
+
+- System quality is evaluated, not assumed
+- Risks are visible and managed
+- Release decisions are informed and accountable
