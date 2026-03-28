@@ -393,3 +393,93 @@ It ensures that:
 - System quality is evaluated, not assumed
 - Risks are visible and managed
 - Release decisions are informed and accountable
+
+## 6. Risk Handling & Ownership
+
+In unstable project environments, risks are unavoidable.
+
+The critical factor is not eliminating all risks, but ensuring that risks are visible, understood, and properly owned.
+
+### Risk Identification
+
+QA is responsible for identifying risks based on:
+
+- Inconsistent system behavior
+- Unvalidated business flows
+- Data discrepancies
+- Integration issues across modules
+
+These risks are not treated as isolated findings, but as indicators of potential system instability.
+
+### Risk Communication
+
+All identified risks must be clearly communicated to stakeholders.
+
+This includes:
+
+- Describing the issue and its impact
+- Explaining affected business flows or modules
+- Highlighting potential consequences if left unresolved
+
+Risk communication ensures that decisions are made with full awareness, not assumptions.
+
+### Risk Documentation
+
+Every risk must be documented in a structured manner.
+
+This includes:
+
+- Reference to QA Logs
+- Associated defects or anomalies
+- Supporting evidence and context
+
+This prevents loss of information and ensures traceability over time.
+
+### Risk Ownership
+
+QA does not assume ownership of system risks.
+
+Instead, ownership is assigned to relevant stakeholders, such as:
+
+- Business (for business logic decisions)
+- System/Technical teams (for implementation issues)
+- Product or management (for release decisions)
+
+QA’s role is to ensure that risk ownership is explicitly defined and acknowledged.
+
+### Controlled Risk Acceptance
+
+In certain scenarios, risks may be accepted to allow progress.
+
+This is only valid if:
+
+- The risk is clearly documented
+- The impact is understood
+- The responsible owner is identified
+
+Accepted risks are not ignored, but tracked for future resolution.
+
+### QA Protection Mechanism
+
+By ensuring that risks are:
+
+- Identified
+- Communicated
+- Documented
+- Assigned
+
+QA protects itself from implicit responsibility over issues that were known but not addressed.
+
+---
+
+### Conclusion
+
+Risk handling transforms QA from a defect reporter into a governance function.
+
+It ensures that:
+
+- Risks are visible and controlled
+- Responsibilities are clearly defined
+- Decisions are accountable
+
+This allows the system to evolve without losing control over its quality and stability.
