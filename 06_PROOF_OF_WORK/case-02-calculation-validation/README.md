@@ -245,3 +245,33 @@ These findings indicate that the primary issue was not isolated defects, but a l
 - Process boundaries
 
 Without addressing these foundational issues, validating individual calculation results would lead to false confidence in system correctness.
+
+## 7. Decision & Outcome
+
+Given the identified system inconsistencies and unresolved ambiguity in calculation logic, the QA decision was to block validation for any flow that could not be clearly explained in terms of:
+
+- Why the logic exists
+- How the system is expected to execute it
+- What business outcome it is intended to produce
+
+The QA position was that unclear calculation behavior must not be treated as valid simply to maintain delivery speed.
+
+Where clarification was not available but stakeholders still chose to proceed, QA explicitly stated that:
+
+- The final outcome could not be guaranteed
+- Validation status was incomplete
+- Any resulting issue would fall under known and accepted risk, not confirmed system correctness
+
+### Outcome
+
+This approach established a clear quality boundary:
+
+- Business-critical happy paths with sufficient clarity could continue to be validated
+- Ambiguous or structurally inconsistent flows were blocked from receiving false approval
+- Delivery pressure did not override the need for explainable and traceable calculation behavior
+
+### Key Principle
+
+If stakeholders want testing to happen earlier and more frequently, then business logic and system reasoning must also become earlier and clearer.
+
+Without that clarity, accelerated testing only increases false validation and rework risk.
