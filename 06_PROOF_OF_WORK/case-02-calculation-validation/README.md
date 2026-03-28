@@ -90,3 +90,80 @@ Only after the system could reliably execute the business-critical happy path wo
 ### Control Objective
 
 The objective was not merely to confirm that calculations produced output, but to ensure that the system behaved consistently enough to be trusted as a business processing engine.
+
+## 5. Control Implementation
+
+To manage system inconsistency in the calculation module, QA implemented a structured control system rather than relying on isolated testing activities.
+
+### QA Log as Central Control
+
+The QA Log was used as the primary control mechanism to track:
+
+- Test execution results
+- Identified inconsistencies
+- Validation outcomes across the calculation flow
+
+Each entry was not treated as an isolated defect, but as part of a broader system context, linking:
+
+- Business flow stage (usage, rating, billing)
+- System module involved
+- Observed behavior vs expected behavior
+
+This allowed QA to detect patterns rather than isolated issues.
+
+### Mapping to Business Flow
+
+All findings were mapped back to the core calculation flow:
+
+- Usage Upload
+- Rating Calculation
+- Billing Calculation
+- Invoice Generation
+
+This ensured that inconsistencies were understood in relation to their impact on the overall business process, not just at the technical level.
+
+### DEV Work Synchronization
+
+QA findings were aligned with development tracking through structured DEV Work logs (FE/BE/DB).
+
+This enabled:
+
+- Visibility of implementation changes
+- Tracking of issue resolution across layers
+- Correlation between system changes and observed behavior
+
+### Calculation Control Layer
+
+A dedicated calculation control structure was used to monitor:
+
+- Input data consistency
+- Rule application behavior
+- Output validation results
+
+This helped isolate whether inconsistencies originated from:
+
+- Data issues
+- Rule misapplication
+- System execution failures
+
+### Rhythm Control
+
+Given the unstable nature of the project, QA maintained a rhythm control mechanism to track:
+
+- Iteration cycles
+- Repeated issues
+- Regression patterns
+
+This prevented the system from repeatedly failing in the same areas without visibility.
+
+---
+
+### Control Objective
+
+The objective of this control system was to transform fragmented observations into a structured and traceable quality view.
+
+Instead of reacting to issues individually, QA established a system-level understanding of:
+
+- Where inconsistencies occur
+- How they propagate across the flow
+- What their impact is on business outcomes
