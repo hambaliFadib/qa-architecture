@@ -215,3 +215,87 @@ QA Delivery Flow is not a linear testing process, but a continuous control syste
 - Prevents invalid validation outcomes
 
 This structured approach allows QA to operate effectively even in unstable and evolving project environments.
+
+## 4. Control System
+
+To operate effectively in unstable and evolving environments, QA requires more than testing capabilities.
+
+A structured control system is necessary to maintain visibility, consistency, and accountability across the project lifecycle.
+
+This control system is implemented through interconnected artifacts that act as a centralized quality governance mechanism.
+
+### QA Log as the Central Control Point
+
+QA Log serves as the primary tracking system for:
+
+- Test execution results
+- Identified defects
+- Validation status across modules
+
+Each entry is not treated as an isolated record, but as part of a broader system view, linking:
+
+- Business flow
+- System module
+- Validation outcome
+
+This enables traceability from testing activities back to business intent.
+
+### DEV Work as Execution Visibility
+
+DEV Work artifacts (FE, BE, DB) provide visibility into ongoing development activities.
+
+This allows QA to:
+
+- Track implementation progress
+- Identify dependencies between modules
+- Detect mismatches between expected and actual system behavior
+
+By integrating QA Log with DEV Work, QA maintains alignment between validation and implementation.
+
+### Calculation Control for High-Risk Logic
+
+For complex calculation areas (such as rating and billing), a dedicated control layer is required.
+
+Calculation Control is used to:
+
+- Define expected calculation behavior
+- Validate formula consistency
+- Detect discrepancies between system output and expected results
+
+This ensures that critical business logic is not treated as a black box, but as a controlled and verifiable component.
+
+### Rhythm Control for Iteration Stability
+
+Given frequent changes in requirements and logic, QA introduces Rhythm Control to manage iteration cycles.
+
+This includes:
+
+- Tracking changes across sprints or releases
+- Monitoring validation coverage over time
+- Ensuring that repeated changes do not degrade system stability
+
+Rhythm Control prevents uncontrolled iteration loops and maintains a predictable validation process.
+
+### Integrated Control Model
+
+These components are not independent, but operate as an integrated system:
+
+- QA Log captures validation outcomes
+- DEV Work reflects implementation progress
+- Calculation Control ensures correctness of critical logic
+- Rhythm Control maintains consistency over time
+
+Together, they form a unified control system that enables QA to maintain system integrity despite changing conditions.
+
+---
+
+### Conclusion
+
+The control system transforms QA from a reactive testing function into a proactive governance layer.
+
+It ensures that:
+
+- Changes are visible and controlled
+- Validation is traceable and consistent
+- Critical logic is verifiable
+- System behavior remains aligned with business intent
