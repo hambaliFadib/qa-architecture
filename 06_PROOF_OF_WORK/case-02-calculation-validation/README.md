@@ -275,3 +275,60 @@ This approach established a clear quality boundary:
 If stakeholders want testing to happen earlier and more frequently, then business logic and system reasoning must also become earlier and clearer.
 
 Without that clarity, accelerated testing only increases false validation and rework risk.
+
+## 8. Evidence (NDA-Safe)
+
+To support the findings and QA approach, evidence was structured in a way that demonstrates real system behavior without exposing sensitive data.
+
+### QA Log Samples
+
+Sample entries from QA Log were used to illustrate:
+
+- Inconsistent validation results
+- Mismatch between expected and actual behavior
+- Repeated failure patterns across calculation stages
+
+All data has been anonymized and simplified for demonstration purposes.
+
+### Calculation Scenario Illustration
+
+Simplified datasets were created to represent:
+
+- Usage input (volume, energy, calorie)
+- Expected vs actual calculation output
+- Cases where system behavior deviated from expected logic
+
+This demonstrates how inconsistencies can occur even with valid input.
+
+### System Behavior Evidence
+
+Examples include:
+
+- UI showing successful processing while backend execution failed
+- Service Agreement (SA) marked as not found despite being active
+- Output discrepancies between database and UI
+
+Screenshots and logs have been sanitized to remove sensitive identifiers.
+
+### Control System Mapping
+
+Each finding can be traced back to:
+
+- QA Log (validation tracking)
+- DEV Work logs (implementation changes)
+- Calculation Control (input-output validation)
+- Rhythm Control (iteration tracking)
+
+This demonstrates how QA maintained visibility and control over system behavior.
+
+---
+
+### Important Note
+
+All evidence presented in this case:
+
+- Uses anonymized or simulated data
+- Does not expose real customer or system identifiers
+- Is intended to demonstrate QA approach and system understanding
+
+The goal is not to replicate the exact production environment, but to illustrate how QA identifies, structures, and controls complex system issues.
