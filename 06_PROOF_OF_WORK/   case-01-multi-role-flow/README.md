@@ -156,3 +156,51 @@ Due to system instability and lack of clear ownership of state logic:
 - Manual intervention (e.g., data injection) reduced traceability
 
 These limitations were explicitly documented as part of QA risk communication.
+
+## 6. System Limitation & Structural Risk
+
+Despite the implemented control mechanisms, several structural risks remained in the system:
+
+### Undefined State Model
+
+The Work Order lifecycle did not have a clearly defined and enforced state machine.
+
+This resulted in:
+- Inconsistent state transitions
+- Ambiguity in determining the current status of a WO
+- Difficulty in validating system behavior reliably
+
+### Lack of State Ownership
+
+There was no clear ownership of state changes:
+- Agent actions
+- System processes
+- Admin interventions
+
+This created conflicts in determining the authoritative source of truth.
+
+### Inconsistent Data Sources
+
+Different system layers (database, dashboard, role-based views) did not consistently reference the same data source.
+
+This led to:
+- Data mismatch
+- Unreliable monitoring
+- Loss of trust in system outputs
+
+### Manual Data Intervention
+
+Manual data injection was used to resolve delivery issues.
+
+However, this introduced:
+- Loss of traceability
+- Potential data corruption
+- Inconsistent system behavior
+
+### QA Position
+
+Given these conditions, QA explicitly recognized that:
+
+- Full validation of system correctness was not achievable
+- Only controlled and observable parts of the system could be validated
+- Structural issues required resolution at system design level, not testing level
