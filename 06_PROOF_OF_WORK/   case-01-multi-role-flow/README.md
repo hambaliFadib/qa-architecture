@@ -110,3 +110,49 @@ This means the system must provide:
 - Correct state visibility
 - Consistent reporting
 - Trustworthy operational data
+
+## 5. Control Implementation
+
+To address the identified inconsistencies in the Work Order flow, QA introduced control mechanisms focused on state validation and data integrity.
+
+### Control Points
+
+The following control points were defined across the flow:
+
+1. Distribution Control
+   - Verify WO creation in database
+   - Validate assignment to Agent
+   - Ensure WO visibility in Agent interface
+
+2. Agent Execution Control
+   - Validate status transition when Agent starts task
+   - Ensure activity (visit/call) updates are persisted in database
+
+3. Monitoring Control (Admin)
+   - Compare dashboard data against database records
+   - Validate task counts and status aggregation
+
+4. End-to-End State Consistency
+   - Track WO lifecycle from creation to completion
+   - Identify mismatches between:
+     - Database state
+     - Agent view
+     - Admin dashboard
+
+### Control Objective
+
+The objective of these controls was not to validate UI behavior alone, but to ensure:
+
+- State consistency across all system layers
+- Data integrity throughout the process
+- Reliable monitoring for business decision-making
+
+### Control Limitation
+
+Due to system instability and lack of clear ownership of state logic:
+
+- Some inconsistencies could be detected but not immediately resolved
+- Certain flows could not be validated end-to-end
+- Manual intervention (e.g., data injection) reduced traceability
+
+These limitations were explicitly documented as part of QA risk communication.
