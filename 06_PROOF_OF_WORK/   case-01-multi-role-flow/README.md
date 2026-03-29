@@ -50,3 +50,63 @@ The expected multi-role flow is:
 This flow represents the core operational cycle for managing field activities.
 
 Each step depends on the successful completion and visibility of the previous step.
+
+## 4. QA Approach
+
+Given the issues observed in the multi-role Work Order flow, the primary QA focus was not limited to whether a WO could be delivered to the Agent.
+
+The main concern was whether the information shown across the system remained accurate and consistent throughout the execution cycle.
+
+### Primary Focus: Data Mismatch and State Inconsistency
+
+The most critical problem was the inconsistency between:
+
+- Dashboard information
+- Role-based system views
+- Database records
+
+This meant that even if a WO successfully reached the Agent, the process could still fail from a business perspective if the displayed status or reported data did not reflect the actual system state.
+
+### Why This Was the Main QA Focus
+
+For operational systems such as MyTrace, Admin decisions depend on the reliability of monitoring information.
+
+If dashboard values, task counts, or status updates are incorrect, then:
+
+- Admin cannot trust execution visibility
+- Field agents may work based on misleading information
+- Reporting becomes unreliable
+- Operational decisions become risky
+
+Because of this, validating delivery alone was not sufficient.
+
+### QA Strategy
+
+The QA approach prioritized system consistency over superficial flow completion.
+
+This included:
+
+1. Verifying whether state changes were correctly reflected across roles
+2. Comparing dashboard information against database records
+3. Identifying points where task visibility and reporting became inconsistent
+4. Challenging flows that appeared successful operationally but failed in data integrity
+
+### Quality Boundary
+
+The QA position was that a delivered WO should not be considered valid if:
+
+- The status shown to Admin was incorrect
+- The dashboard did not match the database
+- Monitoring information could not be trusted
+
+In this case, system consistency was treated as a prerequisite for meaningful operational validation.
+
+### Control Objective
+
+The objective was to ensure that the Work Order process was not only executable, but also reliable as a multi-role coordination system.
+
+This means the system must provide:
+
+- Correct state visibility
+- Consistent reporting
+- Trustworthy operational data
