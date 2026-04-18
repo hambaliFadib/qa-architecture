@@ -204,3 +204,20 @@ Given these conditions, QA explicitly recognized that:
 - Full validation of system correctness was not achievable
 - Only controlled and observable parts of the system could be validated
 - Structural issues required resolution at system design level, not testing level
+
+## Executive Summary
+
+This case demonstrates how QA established control over a multi-role Work Order system in the presence of data inconsistency and unclear system behavior.
+
+Rather than focusing solely on feature validation, QA identified that the primary risk was not task delivery failure, but the inability of the system to provide reliable and consistent operational data.
+
+Key outcomes:
+
+- Defined control points across the Work Order lifecycle
+- Identified critical inconsistencies between dashboard, role views, and database
+- Established validation boundaries to prevent false system acceptance
+- Explicitly documented system limitations and structural risks
+
+The result was a controlled validation approach, where only flows with verifiable and consistent behavior were accepted, while ambiguous flows were blocked from receiving full validation.
+
+This case highlights QA’s role as a control layer ensuring alignment between business intent, system behavior, and data integrity.
