@@ -1,5 +1,3 @@
-# Case 04 — Asynchronous Delay in Work Order Delivery
-
 ## 1. Context
 
 The Work Order (WO) distribution process in MyTrace is expected to deliver tasks from Admin to Agents in a timely manner.
