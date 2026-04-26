@@ -70,7 +70,7 @@ qa-architecture/
 │
 ├── LICENSE.md
 └── README.md
-
+```text
 
 ---
 
@@ -82,5 +82,4 @@ If you are reviewing this repository for professional assessment, read it in thi
 
 Start here:
 
-```text
 00_EXECUTIVE_OVERVIEW/qa-delivery-system-narrative.md
