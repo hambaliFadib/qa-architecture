@@ -70,3 +70,16 @@ qa-architecture/
 │
 ├── LICENSE.md
 └── README.md
+
+---
+
+## Recommended Reading Path
+
+If you are reviewing this repository for professional assessment, read it in this order:
+
+### 1. Executive Narrative
+
+Start here:
+
+```text
+00_EXECUTIVE_OVERVIEW/qa-delivery-system-narrative.md
