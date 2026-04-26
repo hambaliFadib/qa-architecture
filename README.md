@@ -71,6 +71,7 @@ qa-architecture/
 ├── LICENSE.md
 └── README.md
 
+
 ---
 
 ## Recommended Reading Path
